@@ -1,0 +1,23 @@
+{
+	"name":"mdprez",
+	"version":"0.1.0",
+	"description":"Million Dollar Presentation",
+	"repository":{"type":"git","url":"https://github.com/Modified/MDPrez.git"},
+	"private":false,
+	"author": "Ilan <ilan@decodecode.net>",
+	"license": "No",
+	"engines":{
+		"node":"0.10.x",
+		"npm":"1.x"
+	},
+	"scripts":{
+		"start":"coffee server.coffee"
+	},
+	"dependencies":{
+		"express.io":"1.1.x",
+		"coffee-script": "1.7.x",
+		"stylus":"0.42.x"
+	},
+	"devDependencies":{
+	}
+}

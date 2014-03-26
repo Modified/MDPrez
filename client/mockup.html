@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Million Dollar Presentation: Dashboard</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!--
+<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+-->
+<style>
+/* Normalize? */
+.hide{display:none}
+h1{font-family:inherit}
+
+/* Fonts */
+body.mdp{font-family:sans-serif;}
+
+/* Backgrounds */
+body.mdp{background-image: url(http://www.keepbanderabeautiful.org/lecture-peter.jpg);background-repeat: no-repeat;background-size: cover;}
+section,nav{background-color: rgba(255,255,255,0.7);}
+
+/* Layout */
+body{margin:0;overflow-y:scroll}
+section{width:48rem;margin:0 auto;box-sizing: border-box;}
+.page{padding:1em;margin: 0 auto;box-sizing: border-box;}
+.bare{list-style-type: none;margin:0;padding:0}
+
+/* Editing */
+[contenteditable]{outline:none;font-size: inherit;}
+/*[contenteditable="true"],*/
+input:not([type="button"]){border:none;border-bottom:thin dashed black;font-size: inherit;}
+input,select,textarea{background-color: transparent;outline:none;}
+textarea{width:90%;height:18em;overflow-wrap: break-word;font-size: inherit;}
+label{display:block;margin-bottom:0.5em}
+label select,
+label input{margin: 0 0.5em;}
+</style>
+<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAlqP3AMIAAAAAAPEAtbOwAAAAKgD/3kQAAADIAFteigCXmagAAADhAAAAVAD//78A///YAAAAMwAAAJ8AKADoAAAATADnKQAAR0x8AP//6QAAACsAfm51AAAK7wBthP8AAADJAAAA4gAAAI8Aam2SADEyWwAAANoA///yAAAA8wAeH2AAAABNAAAAZgBebf8AAADrAGptggAAAEUAAABeAAAAygBZXY8A/wAAAAAA2wAAAPQAI0j/AAAAZwB7eocAlpSgAGhoiQAAAF8Apq3/AAAA3AAAAE8Am5+rAAoR/wAAAEcAUVaMAAAAYACDg5gAmp2pAAsX/wAAAMQApqfwAAAA3QAABuUAAABpAAAAFgAAAJsAAABhADxg/wAWHf8AAADmAAAA/wAAAKwAAAAfAAAAiwAAAPcAiIeOAAAAUQCPjZ4Aoa7/AAAAagAwAE8AFB1iAJmbqAAAD/8A////AAAAQQAAAFoA///eAAAAIAAAAN8A///3AKQAAAAAADkAAADwAAAAnQBxif8AMDd0AA8Y/wBwcIcA/DMsAAAA4AAAAI0Aa2uFAAAAUwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADxmBABPMAAAajIAAAAAACFrDwUVS2JEORlTXAAAAABQXU4pB0pKP2FKPhFRAAAAUx4sLUpKSkpKSjhGCQAAACM1aANKSkpKSkplKFYAAAAvQWggSkpKSkpKSDM9AAAAQzUaYUdKSkokLlc7NwAAADsKQR8GVEpjFGcQUzEAAAA2RUJeEl9KWAwrAkwAAAAAAGlhWw1ASlJYWBYdAAAAAAAnJRcBSkpKNBhaZAAAAAAAJiIlSkpKSkoLYAAAAAAAAAAcWRtdSU0OVQAAAAAAAAAAAAAIOioTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AADiZwAAwAMAAMABAADAAQAAwAEAAMABAADAAQAAwAEAAMADAADgAwAA4AMAAOAHAADwDwAA/D8AAP//AAA=" rel="icon" type="image/x-icon">
+</head>
+<body class="mdp bg">
+	<section id="root">
+		<h1>Million Dollar Presentation</h1>
+		<p><a href="/glass">Open this in Glass's browser</a>, or another tab, or another computer.</p>
+		<p id="status" class="">Waiting for Glass to connect…</p>
+		<label>Presentation ID: <input id="pid" type="text" placeholder="ID from Prezi URL" value="qixthkpg8bgl"></label>
+		<label>Count down (in minutes): <input id="countdown" type="number" value="3"></label>
+		<button id="play">Clock's ticking!</button>
+		<button id="pause" class="hide">Pause</button>
+		<div id="prezpres"></div>
+		<label><input type="radio" name="dir" id="ltr">LTR</label>
+		<label><input type="radio" name="dir" id="rtl">RTL</label>
+		<textarea id="glazing" placeholder="Enter content to display in Glass…" dir="rtl">1:תוציא את הידיים מהכיסים!
+בלי לחץ, הם רוצים לשמוע אותך.
+3:תן להם עשר שניות לצחוק
+6:img=http://mastersdust.com/triadmc-content/uploads/2012/10/show-me-the-money-jerry-m2.jpg
+7:תפסיק לשלב ידיים!
+עכשיו נדגים כמה תכונות של המערכת:
+8:הבדיחה של סיינפלד: אנשים מעדיפים להיות המת מאשר המספיד.
+9:מערכת היזון חוזר עוקבת אחרי הדופק שלי.
+10:img=http://shifters.files.wordpress.com/2011/03/speaking1.jpg
+11:עבור לנושא הבא.
+12:קשר עין: תסתכל על קובי שיושב מימין.
+→
+13:אפשר לחבר סנסורים נוספים...
+14: Dashboard
+אפשר לשלוט בשקפים גם מהגלאס וגם מהדשבורד.
+15: תכניס הרבה buzzwords
+HTML5, time-to-market, Node, CoffeeScript
+</textarea>
+	</section>
+
+<!-- Non-lazy loading... -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="http://prezi.github.io/prezi-player/lib/PreziPlayer/prezi_player.js"></script>
+<!--
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+-->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+var sio=io.connect(''); // Connect to Socket.IO WebSockets server.
+// Wait till DOM ready.
+$(function(){
+	sio.on('glass_ready',function(){
+		$('#status').text('Glass connected; sending setup…'); //??? Debug.
+		$('#glazing').change(); // Send notes.
+		$('#countdown').change(); // Send countdown.
+		sio.emit('player_step',1); // Show first.
+	});
+	sio.emit('dash_ready');
+
+	// Init player.
+	var player;
+	function init_player(){
+		player=new PreziPlayer('prezpres',{preziId:$('#pid').val(),width:540,height:360,controls:true});
+		player.on(PreziPlayer.EVENT_CURRENT_STEP,function(d){
+			sio.emit('player_step',d.value+1); // Zero based, but UI is one based.
+		});
+	}
+	$('#pid').change(function(){init_player();}).change(); // Listen, and trigger first time.
+
+	// Listen to Glass scrolls?!
+	sio.on('scroll_down',function(){player.flyToNextStep();});
+	sio.on('scroll_up',function(){player.flyToPreviousStep();});
+
+	// Start/stop wall clock in Glass.
+	$('#countdown').change(function(){
+		sio.emit('rewind',$(this).val()*60);
+	});
+	$('#play').click(function(){$('#play,#pause').toggle();sio.emit('play');});
+	$('#pause').click(function(){$('#play,#pause').toggle();sio.emit('pause');});
+
+	// Glazing (not WYSIWYG).
+	$('#glazing').on('change',function(){
+		var a=$(this).val() // Extract. (Would contain markup, HTML, if WYSIWYG.)
+			.split(/^(\d+):/m); // Parse that.
+		a.shift(); // Lose the first string — either empty or has no label.
+		var d={};
+		for (var i=0;i<a.length;i+=2) d[a[i]]=a[i+1];
+		sio.emit('glazing',d);
+	});
+});
+</script>
+</body>
+</html>
